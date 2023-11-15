@@ -1,0 +1,170 @@
+.onboard-card {
+  height: 80vh;
+  width: 92vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+}
+
+.place-content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onboard-card>div {
+  width: 30vw;
+  height: 70vh;
+}
+
+.logoTxt {
+  margin-bottom: 0;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+.textCenter {
+  text-align: center !important;
+  margin-top: 4vh;
+
+  img {
+    height: 100px;
+    width: 120px;
+  }
+}
+
+.header-text {
+  font-size: 1.5em;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.textOpacity {
+  opacity: 0.5;
+  font-size: 1.2em;
+}
+
+.welcome {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-direction: column;
+
+  label {
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  input {
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 1.2em !important;
+    border: 0.5px solid rgb(161, 159, 157) !important;
+  }
+
+  button {
+    background-color: #3b0aad;
+    color: white;
+    height: 6vh;
+    border-radius: 5px;
+    margin-top: 2vh;
+  }
+
+  .error {
+    color: red;
+  }
+}
+
+.work-space-url {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  div {
+    width: 40%;
+    border: 2px solid;
+    height: 50px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid rgb(161, 159, 157) !important;
+    background-color: rgb(243, 242, 241) !important;
+  }
+
+  input {
+    width: 60%;
+    border-left-style: none !important;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+.card {
+  text-align: left;
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.borderNone {
+  border: none;
+}
+
+.planningCards {
+  display: flex;
+}
+
+.cardSpace {
+  margin-left: 15px;
+}
+
+
+.planning-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  mat-card {
+    height: 20vh;
+
+    div {
+      padding: 10px 0px 0px 10px;
+    }
+
+    div:nth-child(2) {
+      margin: 0 0.5vw;
+
+      p:nth-child(1) {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+    }
+  }
+
+  mat-card:nth-child(1) {
+    margin-right: 2vw;
+    border: 0.5px solid #3b0aad;
+  }
+
+}
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  width: 25vw;
+  margin: 0 2vw;
+}

@@ -1,0 +1,99 @@
+<mat-card class="onboard-card">
+    <div>
+        <mat-card-header class="place-content-center">
+            <img [src]="staticTextObj.brandImg" alt="logo">
+            <h1 class="logoTxt">{{staticTextObj.brandTxt}}</h1>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-stepper linear #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <div class="textCenter">
+                            <p class="header-text">{{staticTextObj.welcomeHeaderTxt}}</p>
+                            <p class="textOpacity">{{staticTextObj.welcomeText}}</p>
+                        </div>
+                        <div class="welcome">
+                            <label for="fullName">{{staticTextObj.fullName}}</label>
+                            <input type="text" placeholder="Steve Jobs" formControlName="fullName"
+                                [ngClass]="{ 'is-invalid':userData['fullName'].errors }">
+                            <span *ngIf="userData['fullName'].invalid && userData['fullName'].touched" class="error">
+                                {{staticTextObj.required}}</span>
+                            <label for="displayName">{{staticTextObj.displayName}}</label>
+                            <input type="text" placeholder="Steve" formControlName="displayName"
+                                [ngClass]="{ 'is-invalid': userData['displayName'].errors }">
+                            <div *ngIf="userData['displayName'].invalid && userData['displayName'].touched"
+                                class="error">
+                                {{staticTextObj.required}}</div>
+                            <button mat-button matStepperNext
+                                [disabled]="firstFormGroup.invalid">{{staticTextObj.createBtn}}</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                    <form [formGroup]="secondFormGroup">
+                        <div class="textCenter">
+                            <p class="header-text">{{staticTextObj.workspaceHeaderTxt}}</p>
+                            <p class="textOpacity">{{staticTextObj.workspaceMsgTxt}}</p>
+                        </div>
+                        <div class="welcome">
+                            <label for="workspaceName">{{staticTextObj.workspaceName}}</label>
+                            <input type="text" placeholder="Eden" id="workspaceName" formControlName="workspaceName"
+                                [ngClass]="{ 'is-invalid':workspaceData['workspaceName'].errors }">
+                            <div *ngIf="workspaceData['workspaceName'].invalid && workspaceData[ 'workspaceName'].touched"
+                                class="error">{{staticTextObj.required}}</div>
+
+                            <label for="workspaceUrl">{{staticTextObj.workspaceUrl}}
+                                <span style="opacity: 0.35;">{{staticTextObj.optional}}</span>
+                            </label>
+                            <div class="work-space-url">
+                                <div>www.eden.com/</div>
+                                <input type="text" placeholder="Example" formControlName="workspaceUrl"
+                                    [ngClass]="{ 'is-invalid':workspaceData['workspaceUrl'].errors }">
+                            </div>
+
+                            <div *ngIf="workspaceData['workspaceUrl'].invalid && workspaceData[ 'workspaceUrl'].touched"
+                                class="error">{{staticTextObj.required}}</div>
+
+                            <button mat-button matStepperNext
+                                [disabled]="secondFormGroup.invalid">{{staticTextObj.createBtn}}</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step>
+                    <div class="textCenter">
+                        <p class="header-text">{{staticTextObj.workspaceTitle}}</p>
+                        <p class="textOpacity">{{staticTextObj.planText}}</p>
+                    </div>
+                    <div class="welcome card borderNone">
+                        <div class="planning-cards">
+                            <mat-card *ngFor="let item of staticTextObj.workSpace">
+                                <div>
+                                    <img [src]="item.image" alt="Image Of {{item.image}}">
+                                </div>
+                                <div>
+                                    <p>{{item.header}}</p>
+                                    <p class="textOpacity">{{item.text}}</p>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <button mat-button matStepperNext>{{staticTextObj.createBtn}}</button>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <div class="textCenter">
+                        <img [src]="staticTextObj.congratsImg" alt="Congratulations">
+                    </div>
+                    <div>
+                        <p class="header-text">
+                            {{staticTextObj.congratsTitle}}</p>
+                        <p class="textOpacity place-content-center">
+                            {{staticTextObj.launchMsg}}</p>
+                    </div>
+                    <div class="welcome">
+                        <button mat-button matStepperPrevious>{{staticTextObj.launchBtn}}</button>
+                    </div>
+                </mat-step>
+            </mat-stepper>
+        </mat-card-content>
+    </div>
+</mat-card>
