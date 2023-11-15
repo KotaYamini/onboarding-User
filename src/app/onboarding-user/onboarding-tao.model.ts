@@ -1,7 +1,8 @@
 interface workSpaceContent {
     image: string,
     header: string,
-    text: string
+    text: string,
+    selected:boolean
 }
 
 export interface DynamicTextModel {
@@ -54,12 +55,14 @@ export const dynamicText = {
         {
             image: '../../assets/user-icon.JPG',
             header: 'For myself',
-            text: 'Write better. Think more clearly. Stay organized'
+            text: 'Write better. Think more clearly. Stay organized',
+            selected:false
         },
         {
             image: '../../assets/team_icon.JPG',
             header: 'With my team',
-            text: 'Wikis, docs, tasks & projects, all in one place'
+            text: 'Wikis, docs, tasks & projects, all in one place',
+            selected:false
         }
     ]
 }
