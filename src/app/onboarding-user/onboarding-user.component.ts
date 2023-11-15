@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { dynamicText, DynamicTextModel } from './onboarding-tao.model';
+import { dynamicText, DynamicTextModel } from './onboarding-user.model';
 
 
 @Component({
