@@ -21,9 +21,9 @@
                             <label for="displayName">{{staticTextObj.displayName}}</label>
                             <input type="text" placeholder="Steve" formControlName="displayName"
                                 [ngClass]="{ 'is-invalid': userData['displayName'].errors }">
-                            <div *ngIf="userData['displayName'].invalid && userData['displayName'].touched"
+                            <span *ngIf="userData['displayName'].invalid && userData['displayName'].touched"
                                 class="error">
-                                {{staticTextObj.required}}</div>
+                                {{staticTextObj.required}}</span>
                             <button mat-button matStepperNext
                                 [disabled]="firstFormGroup.invalid">{{staticTextObj.createBtn}}</button>
                         </div>
