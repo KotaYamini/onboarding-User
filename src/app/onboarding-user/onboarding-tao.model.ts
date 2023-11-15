@@ -56,7 +56,7 @@ export const dynamicText = {
             image: '../../assets/user-icon.JPG',
             header: 'For myself',
             text: 'Write better. Think more clearly. Stay organized',
-            selected:false
+            selected:true
         },
         {
             image: '../../assets/team_icon.JPG',
