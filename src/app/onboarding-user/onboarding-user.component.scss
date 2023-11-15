@@ -156,13 +156,17 @@
       }
     }
   }
+ 
 
   mat-card:nth-child(1) {
     margin-right: 2vw;
-    border: 0.5px solid #3b0aad;
   }
 
 }
+
+ .card-selected {
+    border:  0.5px solid #3b0aad;
+  }
 
 ::ng-deep .mat-horizontal-stepper-header-container {
   width: 25vw;
