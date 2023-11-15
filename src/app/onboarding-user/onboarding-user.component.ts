@@ -23,4 +23,9 @@ export class OnboardingUserComponent {
 
   get userData() { return this.firstFormGroup.controls; }
   get workspaceData() { return this.secondFormGroup.controls; }
+
+
+  onChooseWorkSpace(item: any){
+    item.selected = !item.selected;
+  }
 }
