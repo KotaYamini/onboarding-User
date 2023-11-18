@@ -1,5 +1,10 @@
 # OnboardingUser
 
+![image](https://github.com/KotaYamini/onboarding-User/assets/48117959/cc97ad9b-04c8-4133-a0e1-7d1c58e3d2ed)
+![image](https://github.com/KotaYamini/onboarding-User/assets/48117959/c322e223-9525-4800-a655-8cd8f748e849)
+![image](https://github.com/KotaYamini/onboarding-User/assets/48117959/41769a52-6893-4bcc-914b-16c0cb508888)
+![image](https://github.com/KotaYamini/onboarding-User/assets/48117959/6b8d671d-53bd-4d27-9906-198ae52d3419)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
 ## Development server
